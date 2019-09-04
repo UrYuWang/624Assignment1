@@ -1,0 +1,3 @@
+/GitHub/624Assignment1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/GitHub/624Assignment1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/GitHub/624Assignment1/cmake-build-debug/CMakeFiles/624Assignment1.dir

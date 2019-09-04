@@ -30,6 +30,9 @@ thread_pool_launcher::thread_pool_launcher(int pool_sz)
          * threads of a single process, the second argument to sem_init must be
          * set appropriately.
          */
+        sem_init(&_done_sem, INTER_PROC_SEM, pool_sz-1);
+        sem_init(&_free_list_sem, INTER_PROC_SEM, 1);
+        _free_list = NULL;
 
 
         /*
@@ -62,12 +65,27 @@ thread_pool_launcher::thread_pool_launcher(int pool_sz)
          *
          * Create threads in the thread pool.
          */
+        for (i = 0; i < pool_sz; i++) {
+            pthread_create(states[i]._thread_id, NULL, executor_fn, states);
+        }
 }
 
 void thread_pool_launcher::execute_request(request *req)
 {
 
         launcher::execute_request(req);
+
+        sem_wait(&_done_sem);
+        sem_wait(&_free_list_sem);
+        if (_free_list != NULL) {
+                thread_state* temp = _free_list;
+                temp->_req=req;
+                _free_list = _free_list->_list_ptr;
+                sem_post(&(temp->_thread_sem));
+//                pthread_join(*temp->_thread_id, NULL);
+        }
+//        sem_post(&_free_list_sem);
+//        sem_post(&_done_sem);
 
         /*
          * YOUR CODE HERE
@@ -97,12 +115,18 @@ void* thread_pool_launcher::executor_fn(void *arg)
                  * When your code is ready, remove the assert(false) statement
                  * below.
                  */
-                assert(false);
-
+                sem_wait(&st->_thread_sem);
                 /* exec request */
                 st->_req->execute();
                 fetch_and_increment(st->_txns_executed);
-
+                free(st->_req);
+                st->_req = NULL;
+                sem_wait(st->_list_sem);
+                st->_list_ptr = *(st->_free_list);
+                st->_free_list = &(st->_list_ptr);
+                sem_post(st->_list_sem);
+                sem_post(st->_done_sem);
+                sem_post(&st->_thread_sem);
                 /*
                  * YOUR CODE HERE
                  */
