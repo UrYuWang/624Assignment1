@@ -66,7 +66,7 @@ thread_pool_launcher::thread_pool_launcher(int pool_sz)
          * Create threads in the thread pool.
          */
         for (i = 0; i < pool_sz; i++) {
-            pthread_create(states[i]._thread_id, NULL, executor_fn, states);
+            pthread_create(states[i]._thread_id, NULL, executor_fn, &(states[i]));
         }
 }
 
@@ -131,5 +131,4 @@ void* thread_pool_launcher::executor_fn(void *arg)
                  * YOUR CODE HERE
                  */
         }
-        return NULL;
 }

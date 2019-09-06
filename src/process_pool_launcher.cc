@@ -37,6 +37,7 @@ process_pool_launcher::process_pool_launcher(uint32_t nprocs)
          * Hint: Since _done_sem is shared among multiple processes, its second
          * argument must be set appropriately.
          */
+        sem_init(_launcher_state->_done_sem, INTER_PROC_SEM, nprocs-1);
 
 
         /*
@@ -54,7 +55,7 @@ process_pool_launcher::process_pool_launcher(uint32_t nprocs)
          * Hint: Since _free_list_sem is shared among multiple processes, its
          * second argument must be set appropriately.
          */
-
+        sem_init(_launcher_state->_free_list_sem, INTER_PROC_SEM, 1);
 
         /*
          * Setup request buffers. Each process in the pool has its own private
@@ -94,6 +95,12 @@ process_pool_launcher::process_pool_launcher(uint32_t nprocs)
          *
          * Launch the processes in the process pool.
          */
+        pid_t pid;
+        for (i = 0; i < nprocs; i++) {
+            if ((pid=fork()) == 0) {
+                executor_fn(&(pstates[i]));
+            }
+        }
 }
 
 void process_pool_launcher::executor_fn(proc_state *st)
@@ -110,16 +117,23 @@ void process_pool_launcher::executor_fn(proc_state *st)
                  * When your code is ready, remove the assert(false) statement
                  * below.
                  */
-                assert(false);
+                sem_wait(st->_proc_sem);
 
                 st->_request->execute();
                 fetch_and_increment(st->_txns_executed);
 
+                sem_post(st->_proc_sem);
+                sem_wait(st->_launcher_state->_free_list_sem);
+
+                st->_list_ptr = st->_launcher_state->_free_list;
+                st->_launcher_state->_free_list = st;
+
+                sem_post(st->_launcher_state->_free_list_sem);
+                sem_post(st->_launcher_state->_done_sem);
                 /*
                  * YOUR CODE HERE
                  */
         }
-        exit(0);
 }
 
 
@@ -129,6 +143,15 @@ void process_pool_launcher::execute_request(request *req)
         launcher::execute_request(req);
 
         st = NULL;
+        sem_wait(_launcher_state->_done_sem);
+
+        sem_wait(_launcher_state->_free_list_sem);
+
+        proc_state* temp = _launcher_state->_free_list;
+        _launcher_state->_free_list = _launcher_state->_free_list->_list_ptr;
+
+        sem_post(_launcher_state->_free_list_sem);
+
         /*
          * YOUR CODE HERE
          *
@@ -144,6 +167,8 @@ void process_pool_launcher::execute_request(request *req)
         assert(request::copy_size(req) <= RQST_BUF_SZ);
         assert(st != NULL);
         request::copy_request((char*)st->_request, req);
+
+        sem_post(temp->_proc_sem);
 
         /*
          * YOUR CODE HERE

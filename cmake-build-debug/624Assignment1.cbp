@@ -8,43 +8,43 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/GitHub/624Assignment1/cmake-build-debug"/>
+				<Option working_dir="/GitHub/624-1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/GitHub/624Assignment1/cmake-build-debug"/>
+				<Option working_dir="/GitHub/624-1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/GitHub/624Assignment1/cmake-build-debug"/>
+				<Option working_dir="/GitHub/624-1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="624Assignment1">
-				<Option output="/GitHub/624Assignment1/cmake-build-debug/624Assignment1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/GitHub/624Assignment1/cmake-build-debug"/>
+				<Option output="/GitHub/624-1/cmake-build-debug/624Assignment1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/GitHub/624-1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/GitHub/624Assignment1/include"/>
+					<Add directory="/GitHub/624-1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
@@ -53,20 +53,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 624Assignment1"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 624Assignment1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="624Assignment1/fast">
-				<Option output="/GitHub/624Assignment1/cmake-build-debug/624Assignment1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/GitHub/624Assignment1/cmake-build-debug"/>
+				<Option output="/GitHub/624-1/cmake-build-debug/624Assignment1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/GitHub/624-1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/GitHub/624Assignment1/include"/>
+					<Add directory="/GitHub/624-1/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
@@ -75,71 +75,71 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 624Assignment1/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624Assignment1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 624Assignment1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/GitHub/624-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/GitHub/624Assignment1/include/config.h">
+		<Unit filename="/GitHub/624-1/include/config.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/database.h">
+		<Unit filename="/GitHub/624-1/include/database.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/launcher.h">
+		<Unit filename="/GitHub/624-1/include/launcher.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/perf_monitor.h">
+		<Unit filename="/GitHub/624-1/include/perf_monitor.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/process_launcher.h">
+		<Unit filename="/GitHub/624-1/include/process_launcher.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/process_pool_launcher.h">
+		<Unit filename="/GitHub/624-1/include/process_pool_launcher.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/request.h">
+		<Unit filename="/GitHub/624-1/include/request.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/thread_launcher.h">
+		<Unit filename="/GitHub/624-1/include/thread_launcher.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/thread_pool_launcher.h">
+		<Unit filename="/GitHub/624-1/include/thread_pool_launcher.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/include/utils.h">
+		<Unit filename="/GitHub/624-1/include/utils.h">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/database.cc">
+		<Unit filename="/GitHub/624-1/src/database.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/launcher.cc">
+		<Unit filename="/GitHub/624-1/src/launcher.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/perf_monitor.cc">
+		<Unit filename="/GitHub/624-1/src/perf_monitor.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/process_launcher.cc">
+		<Unit filename="/GitHub/624-1/src/process_launcher.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/process_pool_launcher.cc">
+		<Unit filename="/GitHub/624-1/src/process_pool_launcher.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/request.cc">
+		<Unit filename="/GitHub/624-1/src/request.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/start.cc">
+		<Unit filename="/GitHub/624-1/src/start.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/thread_launcher.cc">
+		<Unit filename="/GitHub/624-1/src/thread_launcher.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/src/thread_pool_launcher.cc">
+		<Unit filename="/GitHub/624-1/src/thread_pool_launcher.cc">
 			<Option target="624Assignment1"/>
 		</Unit>
-		<Unit filename="/GitHub/624Assignment1/CMakeLists.txt">
+		<Unit filename="/GitHub/624-1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
